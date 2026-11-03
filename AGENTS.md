@@ -1,6 +1,6 @@
 # Project guidance
 
-This repository is data only: datasets and schemas. Do not add code, tests, CI or servers here.
+This repository is data only: datasets. Do not add code, tests, CI or servers here.
 
 New data files are JSONL. Keep synthetic/AI-drafted content explicitly marked
 (`verified: false`, `source`) and distinct from human-verified data. Data

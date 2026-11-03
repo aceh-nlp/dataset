@@ -6,10 +6,10 @@ repositories consume it:
 
 | Repository | Owns |
 |---|---|
-| [aceh-nlp-frontend](https://github.com/aceh-nlp/frontend) | Static interface (sign-in, review, upload) |
-| [aceh-nlp-dataset](https://github.com/aceh-nlp/dataset) | Data: datasets, schemas |
-| [aceh-nlp-backend](https://github.com/aceh-nlp/backend) | API: serves this data, stores ratings, proxies the GPU |
-| [aceh-nlp-gpu](https://github.com/aceh-nlp/gpu) | Model hosting: inference server |
+| [aceh-nlp/frontend](https://github.com/aceh-nlp/frontend) | Static interface (sign-in, review, upload) |
+| [aceh-nlp/dataset](https://github.com/aceh-nlp/dataset) | Data: datasets, schemas |
+| [aceh-nlp/backend](https://github.com/aceh-nlp/backend) | API: serves this data, stores ratings, proxies the GPU |
+| [aceh-nlp/gpu](https://github.com/aceh-nlp/gpu) | Model hosting: inference server |
 
 ## Layout
 

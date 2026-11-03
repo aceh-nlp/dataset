@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/aceh-nlp/aceh-nlp-dataset/schemas/qa.schema.json",
+  "$id": "https://github.com/aceh-nlp/dataset/schemas/qa.schema.json",
   "title": "qa",
   "type": "object",
   "required": [

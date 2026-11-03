@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aceh-nlp/aceh-nlp-dataset/schemas/feedback.schema.json",
+  "title": "feedback",
+  "type": "object",
+  "required": [
+    "data",
+    "reviewer",
+    "result"
+  ],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": [
+        "dataset",
+        "item_id",
+        "sha256"
+      ],
+      "properties": {
+        "dataset": {
+          "type": "string"
+        },
+        "item_id": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "reviewer": {
+      "type": "object"
+    },
+    "result": {
+      "type": "object"
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "reviewer": {
+          "type": "object",
+          "required": [
+            "email",
+            "dialect",
+            "tier"
+          ],
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "dialect": {
+              "type": "string"
+            },
+            "tier": {
+              "const": "specialist"
+            }
+          },
+          "additionalProperties": false
+        },
+        "result": {
+          "type": "object",
+          "required": [
+            "score",
+            "ts"
+          ],
+          "properties": {
+            "score": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "correction": {
+              "type": "string"
+            },
+            "annotation": {
+              "type": "string"
+            },
+            "ts": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    {
+      "properties": {
+        "reviewer": {
+          "type": "object",
+          "required": [
+            "email",
+            "dialect",
+            "tier"
+          ],
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "dialect": {
+              "type": "string"
+            },
+            "tier": {
+              "const": "everyday"
+            }
+          },
+          "additionalProperties": false
+        },
+        "result": {
+          "type": "object",
+          "required": [
+            "vote",
+            "ts"
+          ],
+          "properties": {
+            "vote": {
+              "enum": [
+                1,
+                -1
+              ]
+            },
+            "ts": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

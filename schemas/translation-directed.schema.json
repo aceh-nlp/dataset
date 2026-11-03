@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aceh-nlp/aceh-nlp-dataset/schemas/translation-directed.schema.json",
+  "title": "translation-directed",
+  "type": "object",
+  "required": [
+    "source",
+    "target"
+  ],
+  "properties": {
+    "source": {
+      "type": "string"
+    },
+    "target": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

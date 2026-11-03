@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aceh-nlp/aceh-nlp-dataset/schemas/translation.schema.json",
+  "title": "translation",
+  "type": "object",
+  "required": [
+    "aceh",
+    "bahasa"
+  ],
+  "properties": {
+    "aceh": {
+      "type": "string"
+    },
+    "bahasa": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

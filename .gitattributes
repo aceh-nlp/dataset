@@ -1,0 +1,2 @@
+# Preserve the supplied research/data payload byte-for-byte, including whitespace.
+acehnese_model_screen/** -text -whitespace

@@ -14,10 +14,11 @@ repositories consume it:
 ## Layout
 
 ```
+SOURCES.md                 every source we collect from, and where it stands
 data/
   layer_1_specialist/      checked by educated native speakers from NGOs and institutions
   layer_2_everyday/        daily speakers, recordings, internet text
-    wikipedia_ace_pilot_v0/  44 sentences from the Acehnese Wikipedia, a source test,
+    wikipedia_ace_pages_v0/  9 whole pages from the Acehnese Wikipedia, a source test,
                            0% speaker-verified; see its DATASET_CARD.md (sha256 inside)
   layer_3_synthetic/       AI-drafted or rule-generated
     aceh_synthetic_v0/     162 AI-drafted rows (sentences, dialogue turns, paragraphs),
@@ -28,6 +29,11 @@ data/
 
 - Every new data file is **JSONL** (UTF-8, one object per line). No TSV/CSV for
   new data.
+- Collected text is kept whole: one row per page (a web page, an article, one page of
+  a book), not cut into sentences. A book is one file, one row per page.
+- Annotation of collected text is per page or per book, not per sentence. It goes in
+  the dataset's `raw/annotation_sheet.jsonl` (`rating_1_5`, `dialect`, `notes`) and
+  carries no personal information.
 - Synthetic / AI-drafted content stays explicitly marked (`verified: false`,
   `source` field) and separate from human-verified data.
 - Earlier material (NusaX, grammar pairs, evaluator prompts, model-screening

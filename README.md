@@ -17,6 +17,8 @@ repositories consume it:
 data/
   layer_1_specialist/      checked by educated native speakers from NGOs and institutions
   layer_2_everyday/        daily speakers, recordings, internet text
+    wikipedia_ace_pilot_v0/  44 sentences from the Acehnese Wikipedia, a source test,
+                           0% speaker-verified; see its DATASET_CARD.md (sha256 inside)
   layer_3_synthetic/       AI-drafted or rule-generated
     aceh_synthetic_v0/     162 AI-drafted rows (sentences, dialogue turns, paragraphs),
                            0% speaker-verified; see its DATASET_CARD.md (sha256 inside)
